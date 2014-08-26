@@ -1,0 +1,54 @@
+{
+    "internal": {
+        "email": {
+            "distro": null, 
+            "module": "internal.email", 
+            "parameter": {}, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nSend a report by email\n\n### Parameters\n\t\t\t\t"
+            }
+        }, 
+        "reload": {
+            "distro": null, 
+            "module": "internal.reload", 
+            "parameter": {}, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nReload states of current application\n\n### Parameters\n\t\t\t\t"
+            }
+        }
+    }, 
+    "object": {
+        "file": {
+            "distro": null, 
+            "module": "object.file", 
+            "parameter": {
+                "path": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nAdd the associated event's timestamp to a specified file\n\n### Parameters\n\n*   **`path`** (*required*): the path to the file\n\n\t\texample:\n\t\t\t/path/to/file\n\t\t\t\t"
+            }
+        }, 
+        "script": {
+            "distro": null, 
+            "module": "object.script", 
+            "parameter": {
+                "path": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nRun a script\n\n### Parameters\n\n*   **`path`** (*required*): the path to the script\n\n\t\texample:\n\t\t\t/path/to/script\n\t\t\t\t"
+            }
+        }
+    }
+}

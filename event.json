@@ -1,0 +1,191 @@
+{
+    "internal": {
+        "email": {
+            "distro": null, 
+            "module": "internal.email", 
+            "parameter": {}, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nSend a report by email\n\n### Parameters\n\t\t\t\t"
+            }
+        }, 
+        "reload": {
+            "distro": null, 
+            "module": "internal.reload", 
+            "parameter": {}, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nReload states of current application\n\n### Parameters\n\t\t\t\t"
+            }
+        }
+    }, 
+    "object": {
+        "file": {
+            "distro": null, 
+            "module": "object.file", 
+            "parameter": {
+                "path": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nAdd the associated event's timestamp to a specified file\n\n### Parameters\n\n*   **`path`** (*required*): the path to the file\n\n\t\texample:\n\t\t\t/path/to/file\n\t\t\t\t"
+            }
+        }, 
+        "script": {
+            "distro": null, 
+            "module": "object.script", 
+            "parameter": {
+                "path": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nRun a script\n\n### Parameters\n\n*   **`path`** (*required*): the path to the script\n\n\t\texample:\n\t\t\t/path/to/script\n\t\t\t\t"
+            }
+        }
+    }, 
+    "remote": {
+        "file": {
+            "distro": null, 
+            "module": "remote.file", 
+            "parameter": {
+                "URL": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "action": {
+                    "required": false, 
+                    "type": "action", 
+                    "visible": true
+                }, 
+                "password": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "username": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nTrigger change on remote file\n\n### Parameters\n\n*   **`URL`** (*required*): the url of the file\n\n\t\texample:\n\t\t\thttp:///host/path/to/file\n\n\t>note: currently supported protocols: http, https, ftp\n\n*   **`username`** (*optional*): username if authentication is required\n\n*   **`password`** (*optional*): password if authentication is required\n\n*   **`action`** (*optional*): action to execute if the event is triggered\n\n\t\texample:\n\t\t\t@{host.action.1}\n\t\t\t\t"
+            }
+        }, 
+        "git": {
+            "distro": null, 
+            "module": "remote.git", 
+            "parameter": {
+                "action": {
+                    "required": false, 
+                    "type": "action", 
+                    "visible": true
+                }, 
+                "branch": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "password": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "repo": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "username": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nTrigger change on remote git repository\n\n### Parameters\n\n*   **`repo`** (*required*): the URI of the git repo\n\n\t\texample:\n\t\t\thttps:///host/path/to/git/repo\n\n*   **`branch`** (*optional*): repository branch to watch\n\n\t>note: default: master\n\n*   **`username`** (*optional*): username if authentication is required\n\n*   **`password`** (*optional*): password if authentication is required\n\n*   **`action`** (*optional*): action to execute if the event is triggered\n\n\t\texample:\n\t\t\t@{host.action.1}\n\t\t\t\t"
+            }
+        }, 
+        "hg": {
+            "distro": null, 
+            "module": "remote.hg", 
+            "parameter": {
+                "action": {
+                    "required": false, 
+                    "type": "action", 
+                    "visible": true
+                }, 
+                "branch": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "password": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "repo": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "username": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nTrigger change on remote Mercurial (hg) repository\n\n### Parameters\n\n*   **`repo`** (*required*): the URI of the hg repo\n\n\t\texample:\n\t\t\thttps:///host/path/to/hg/repo\n\n*   **`branch`** (*optional*): repository branch to watch\n\n\t>note: default: master\n\n*   **`username`** (*optional*): username if authentication is required\n\n*   **`password`** (*optional*): password if authentication is required\n\n*   **`action`** (*optional*): action to execute if the event is triggered\n\n\t\texample:\n\t\t\t@{host.action.1}\n\t\t\t\t"
+            }
+        }, 
+        "svn": {
+            "distro": null, 
+            "module": "remote.svn", 
+            "parameter": {
+                "action": {
+                    "required": false, 
+                    "type": "action", 
+                    "visible": true
+                }, 
+                "branch": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "password": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "repo": {
+                    "required": true, 
+                    "type": "line", 
+                    "visible": true
+                }, 
+                "username": {
+                    "required": false, 
+                    "type": "line", 
+                    "visible": true
+                }
+            }, 
+            "reference": {
+                "cn": "", 
+                "en": "\n### Description\nTrigger change on remote Subversion (svn) repository\n\n### Parameters\n\n*   **`repo`** (*required*): the URI of the svn repo\n\n\t\texample:\n\t\t\thttps:///host/path/to/svn/repo\n\n*   **`branch`** (*optional*): repository branch to watch\n\n\t>note: default: master\n\n*   **`username`** (*optional*): username if authentication is required\n\n*   **`password`** (*optional*): password if authentication is required\n\n*   **`action`** (*optional*): action to execute if the event is triggered\n\n\t\texample:\n\t\t\t@{host.action.1}\n\t\t\t\t"
+            }
+        }
+    }
+}
